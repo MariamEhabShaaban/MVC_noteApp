@@ -11,3 +11,9 @@ function dd($data){
 function uriIs($uri){
     return $uri==$_SERVER['REQUEST_URI'];
 }
+
+function authorize($condition,$status=Response::FORBIDDEN){
+    if($condition){
+        abort($status);
+    }
+}
