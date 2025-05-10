@@ -1,6 +1,8 @@
 <?php
-require 'validator.php';
-$config=require 'config.php';
+use Core\Database;
+use Core\validator;
+
+$config=require base_path('config.php');
 $db= new Database($config['database']);
 $heading ='Create Note';
 
@@ -17,4 +19,6 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     }
 }
 
-require 'views/notes/create.view.php';
+require view('notes/create.view.php',[
+    'heading'=>'Create'
+]);

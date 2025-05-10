@@ -1,4 +1,6 @@
 <?php
 
-require_once 'functions.php';
-require 'views/403.view.php';
+
+require view('403.view.php',[
+    'heading'=>''
+]);
