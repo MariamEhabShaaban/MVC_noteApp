@@ -30,7 +30,7 @@ class Router{
 
     public function delete($uri,$controller){
 
-        $this->add($uri,$controller,'DELETE');
+        $this->add($uri,$controller,"DELETE");
 
     }
 

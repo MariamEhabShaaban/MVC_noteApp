@@ -14,7 +14,7 @@ function uriIs($uri){
 }
 
 function authorize($condition,$status=Response::FORBIDDEN){
-    if($condition){
+    if(!$condition){
         abort($status);
     }
 }

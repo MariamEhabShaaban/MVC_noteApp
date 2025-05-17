@@ -14,7 +14,7 @@ class Database{
         $this->conn = new PDO($dsn, $username, $password,$options);
 
     }
-    public function qurey($query,$params=[]){
+    public function query($query,$params=[]){
        
       
             $this->st = $this->conn->prepare($query); 

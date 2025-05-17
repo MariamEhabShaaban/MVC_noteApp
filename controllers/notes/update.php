@@ -1,12 +1,11 @@
 <?php
-use Core\Database;
+use Core\App;
 use Core\validator;
+$db=App::container()->resolve(\Core\Database::class);
 
-$config=require base_path('config.php');
-$db= new Database($config['database']);
-$heading ='Create Note';
+$heading ='Update Note';
 
-
+    $id=$_POST['id'];
     $errors=[];
     $body=htmlspecialchars(trim($_POST['body']));
   
@@ -16,13 +15,13 @@ $heading ='Create Note';
    
     }
     if(!empty($errors)){
-        require view('notes/create.view.php',[
-            'heading'=>'Create',
+        require view('notes/edit.view.php',[
+            'heading'=>'Edit',
             'errors'=>$errors
         ]);
     }
     else if(empty($errors)){
-        $db->query('INSERT INTO `notes` (`body` ,`user_id`) VALUES (?,?)',[$body,1]);
+        $db->query('UPDATE notes SET body=? WHERE id=?',[$body,$id]);
         header('location:/notes');
         exit;
     }

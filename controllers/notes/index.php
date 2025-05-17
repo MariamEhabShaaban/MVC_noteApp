@@ -6,7 +6,7 @@ $config=require base_path('config.php');
 
 $db= new Database($config['database'],'root','');
 
-$notes=$db->qurey('SELECT * FROM `notes`')->getAll();
+$notes=$db->query('SELECT * FROM `notes`')->getAll();
 
 $heading='Notes';
 
