@@ -6,7 +6,10 @@ $config=require base_path('config.php');
 
 $db= new Database($config['database'],'root','');
 
-$notes=$db->query('SELECT * FROM `notes`')->getAll();
+
+$user_id=1;
+
+$notes=$db->query('SELECT * FROM `notes` WHERE user_id=?',[$user_id])->getAll();
 
 $heading='Notes';
 

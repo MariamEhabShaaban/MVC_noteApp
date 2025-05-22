@@ -26,3 +26,5 @@ $router->get('/note/edit', 'controllers/notes/edit.php');
 $router->post('/notes', 'controllers/notes/store.php');
 
 $router->patch('/note', 'controllers/notes/update.php');
+
+//$route->get('/register','controllers/registration/create.php');

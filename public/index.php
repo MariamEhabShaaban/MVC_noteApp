@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 define('BASE_PATH', str_replace('\\', '/', __DIR__) . '/../');
 
