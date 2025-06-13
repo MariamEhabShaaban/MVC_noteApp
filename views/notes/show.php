@@ -3,8 +3,9 @@
 <?php 
 
 require base_path('views/partials/header.php');
-
+require view('partials/banner.php');
 require base_path('views/partials/nav.php');
+
 
 ?>
 <main>

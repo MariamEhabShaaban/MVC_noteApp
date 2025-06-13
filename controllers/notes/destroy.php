@@ -3,7 +3,7 @@ use Core\App;
 
 $db=App::container()->resolve(\Core\Database::class);
 
-$currentUserId = 1;
+// $currentUserId = 1;
 
 $id=$_POST['id'];
 

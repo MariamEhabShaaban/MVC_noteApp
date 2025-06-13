@@ -2,7 +2,7 @@
 
 use Core\Database;
 
-$cur_user_id=1;
+// $cur_user_id=1;
 
 $config=require base_path('config.php');
 

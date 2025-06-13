@@ -3,7 +3,7 @@
 
 
 use Core\App;
-$cur_user_id=1;
+// $cur_user_id=1;
 $db=App::container()->resolve(\Core\Database::class);
 
 $id=$_GET['id'];
